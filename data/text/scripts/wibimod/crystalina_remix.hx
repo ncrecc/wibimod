@@ -1,0 +1,2 @@
+//wip lol -bert
+//basically just check dicehistory.length and timesused to see if there's a difference, if so reset the evar "turns since used" count to 0, otherwise increment it by 1. if it's 2 by the start of the turn, reroll it

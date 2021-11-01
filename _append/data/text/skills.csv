@@ -1,0 +1,14 @@
+Name,Description,Author,Comment,Script
+Cracked Helmet,Gain [reduce]<var:crackedhelmet>[;] -1 each turn,lovebug,,/*should start at 3*/ var ch = self.getvar(~crackedhelmet~); if(ch > 0) { inflictself(REDUCE|ch); sfx(~_shield~); } else { self.textparticle(~No effect!~); }
+Hovering Dice,Roll a [dice]<var:itemuses>[;] +1 per item use,lovebug,,/*another kludge lol*/ givedice(self.equipmentused);
+Commute,Gain [dodge]2[;] only even turns,lovebug,,if(turn % 2 == 0) { inflictself(DODGE|2); sfx(~_dodge~); } else { self.textparticle(~No effect!~); }
+Cargo Lift,Roll 1[;] 2[;] 3[;] 4[;] 5[;] 6 (once),lovebug,,givedice([1|2|3|4|5|6]); if(!self.isplayer) var self = target; Gadget.changegadget(self| ~Cargo Lift~| ~Broken Gadget~);
+Reinforcements,If out of dice[;] roll 2 dice,lovebug,,var diceavailable = false; for(dice in self.dicepool) { if(dice.available()) { diceavailable = true; break; } } for(eq in self.equipment) { if(eq.isready() && eq.assigneddice.length > 0) { for(dice in eq.assigneddice) { if(dice != null && dice.available()) { diceavailable = true; break; } } } } if(!diceavailable) { givedice([rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])]); } else { self.textparticle(~No effect!~); }
+Rusty Cauldron,Roll a dice. At 1/6[heart][;] roll 6 dice,lovebug,,if(self.hp / self.maxhp <= 1/6) { givedice([for(i in 0...6) rand([1|2|3|4|5|6])]); sfx(~useitem~); } else { givedice(); }
+Pinwheel,Inflict [lock]<var:pinwheel>[;] -1 each turn,lovebug,,/*should start at 3*/ var pw = self.getvar(~pinwheel~); if(pw > 0) { inflict(LOCK|pw); sfx(~_lock~); } else { self.textparticle(~No effect!~); }
+Red Redemption,Deal [sword]3 per red item,lovebug,,var red = 0; for(eq in self.equipment) if(eq.equipmentcol == 2 && eq.availablethisturn && !(eq.onceperbattle && eq.usedthisbattle) && !eq.hastag(~internal~)) red++; attack(red * 2); sfxdamage(target|red * 2);
+Thunder Wave,Inflict [shock]Paralyze_all,lovebug,,inflict('ncr_paralysis_all'); sfx('_shock');
+Dry Cough,Inflict [poison]1 poison,lovebug,,inflict(POISON); sfx('_poison');
+Rust Monster,Do [sword]2 per [heart]5 missing,Black Widow,,
+Auction,Sell an item for [gold]3,lovebug,,/*todo!*/
+gadgetname,[80%]Use all your items' gadgets (once),Test,,

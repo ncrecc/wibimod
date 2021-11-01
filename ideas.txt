@@ -1,0 +1,23 @@
+(by titku)
+
+swordlike that passively rerolls your lowest dice
+"roll a random dice of different parity" cauldron
+"roll a random dice that's high if you used a low dice, low if you used a high dice" cauldron
+a high countdown but whenever you use any dice anywhere but another countdown it gets decreased by some value (initial thought was same value as the dice itself but maybe nah)
+use oingo boingo rageblade lol
+size 1 passive that increases the amount of damage shock does, or makes the slot even like handyman rule if in non-pu.
+size 1 two-slot hammerlike that shocks on 6 [in]
+size 2: do d6 damage, replace this with a random item nezt turn
+size 1, needs doubles: boost countdowns by d6, return both dice
+mars gospel (for warrior?)
+size 1: at odd amount of health, flip the dice. at even amount of health, reroll the dice. (upgraded: recover 2 health on use)
+size 1, min 4: do d6 damage. if sum of your other dice is greater than the enemy's health, recover 3 health also. (could this be mercury fly trap?)
+size 1, maz 3: if enemy's health bar is fuller than yours, drain d6, otherwise deal d6 dmg.
+put bad damage as a warrior item and make sure warrior gets shielding
+some item like "if you've taken 12 or more damage this turn and the enemy's last turn, this unlocks"
+"if your limit break is full, do Z and decharge your limit break entirely"
+a one-use item that hurts you some amount and makes your limit break become full, then turns into scrap metal or something (inspired by focus spell)
+needle item that inflicts injection. make a needle icon for the status
+item that inflicts jumble
+stonks. size 1: this card deals d6 damage next fight
+size 1: some difficult slot. this card deals 0 damage at the start of every fight. on use, increase that by 1.
